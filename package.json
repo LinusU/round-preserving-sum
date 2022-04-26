@@ -1,0 +1,13 @@
+{
+  "name": "round-preserving-sum",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "fuzz": "jsfuzz fuzz.js",
+    "test": "node test && standard"
+  },
+  "devDependencies": {
+    "jsfuzz": "^1.0.15",
+    "standard": "^17.0.0"
+  }
+}

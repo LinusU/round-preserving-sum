@@ -1,0 +1,16 @@
+const assert = require('assert')
+const roundPreservingSum = require('./')
+
+assert.throws(() => roundPreservingSum([NaN]))
+assert.throws(() => roundPreservingSum([Infinity]))
+assert.throws(() => roundPreservingSum([-Infinity]))
+assert.throws(() => roundPreservingSum([10, NaN]))
+assert.throws(() => roundPreservingSum([10, Infinity]))
+assert.throws(() => roundPreservingSum([10, -Infinity]))
+assert.throws(() => roundPreservingSum([9007199254740991, 10]))
+assert.throws(() => roundPreservingSum([-9007199254740991, -10]))
+
+assert.deepStrictEqual(roundPreservingSum([0, 1]), [0, 1])
+assert.deepStrictEqual(roundPreservingSum([1, 0]), [1, 0])
+assert.deepStrictEqual(roundPreservingSum([0.4, 0.6]), [0, 1])
+assert.deepStrictEqual(roundPreservingSum([0.6, 0.4]), [1, 0])
