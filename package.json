@@ -1,6 +1,7 @@
 {
   "name": "round-preserving-sum",
   "version": "0.1.0",
+  "repository": "LinusU/round-preserving-sum",
   "license": "MIT",
   "scripts": {
     "fuzz": "jsfuzz fuzz.js",
